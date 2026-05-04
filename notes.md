@@ -1,4 +1,4 @@
-# Day 1 - Terminal Basics
+# Prereq fast track notes.
 
 cd ~/code/prereq-log
 code. 
@@ -98,4 +98,58 @@ O <--- O <--- O <--- O
                 ---- O <--- O
 
 
- After the third commit, the history branches into two separate branches. This might correspond to, for example, two separate features being developed in parallel, independently from each other. In the future, these branches may be merged to create a new snapshot that incorporates both of the features, producing a new history tha
+After the third commit, the history branches off. This might correspond to, for example, two seperate features being developed in parallel, independently. In the future these branches may be merged to create a new snapshot that incorporates both of the features.
+
+It would look something like this;
+
+O <--- O <--- O <--- O <------ 0
+              ^               /
+               \             v
+                ---- O <--- O
+
+Commits are immutable. Mistakes can be corrected however; it's just that "edit's" to the commit history are actually creating entirely new commits and referneces are made to point to the new ones.
+
+Objects = tree | blob | commit
+
+All snapshots are identified by their SHA-1 hashes. However this is inconvenient as SHA-1 hashes are 40 Hexadecimal characters. Gits solution to this is "refrences". Refrences are pointers to commits. Unlike objects which are immuatable, refrences are mutable (can be updated to point to a new commit)
+
+ Git Commands;
+
+    - git help <command> = get help for git command
+    - git init = creates a new git repo, with data stored in the .git directory
+    - git status = tells you whats going on
+    - git add <filename> = adds files to staging area
+    - git commit = creates a new commit
+    - git log = shows flattened log of history
+    - git log --all --graph --decorate = visualizes history as a DAG
+    - git diff <revision> <filename> = shows differences in files between snaps
+    - git checkout <revision> = updates HEAD 
+
+Branching and Merging;
+
+    - git branch = shows branches
+    - git branch <name> = creates a branch
+    - git switch <name> = switches branch
+    - git checkout -b <name> = creates a branch and switches to it.
+    - git merge <revision> = merges into current branch
+    - git mergetool = use a fancy tool to help resolve merge conflicts
+    - git rebase = rebase set of patches onto a new base
+
+
+Remotes;
+
+    - git remote = list remotes
+    - git remote add <name> <url> = add a remote
+    - git push <remote> <local branch>:<remote branch> = send objects to a remote, and update remote refrences
+    - git branch --set-upstream-to=<remote>/<remote branch> = set up correspondence between local and remote branch
+    - git fetch = retrieve objects/refrences from a remote
+    - git pull = same as git fetch; git merge
+    - git clone = download repository from remote
+
+Undo;
+
+    - git commit --ammend = edit a commits contents/message
+    - git reset <file> = unstage a file
+    - git restore = discard changes
+
+
