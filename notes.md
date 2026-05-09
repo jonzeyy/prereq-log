@@ -54,7 +54,7 @@ There are 4 types of Quoting mechanisms.
 
 - Single Quotes: Enclosing a character in single quotes ( '' ) preserves the literal value of each character inside the single quotes. A single quote cannot occur between single quotes. 
 
-- Double Quotes: Enclosing characters in double quotes (‘"’) preserves the literal value of all characters within the quotes, with the exception of ‘$’, ‘`’, ‘\’, and, when history expansion is enabled, ‘!’. When the shell is in POSIX mode (see Bash and POSIX), the ‘!’ has no special meaning within double quotes, even when history expansion is enabled. The characters ‘$’ and ‘`’ retain their special meaning within double quotes (see Shell Expansions). The backslash retains its special meaning only when followed by one of the following characters: ‘$’, ‘`’, ‘"’, ‘\’, or newline. Within double quotes, backslashes that are followed by one of these characters are removed. Backslashes preceding characters without a special meaning are left unmodified
+- Double Quotes: Enclosing characters in double quotes (‘"’) preserves the literal value of all characters within the quotes, with the exception of ‘$’, ‘`’, ‘\’, and, when history expansion is enabled, ‘!’. When the shell is in POSIX mode (see Bash and POSIX), the ‘!’ has no special meaning within double quotes, even when history expansion is enabled. The characters ‘$’ and ‘’ retain their special meaning within double quotes (see Shell Expansions). The backslash retains its special meaning only when followed by one of the following characters: ‘$’, ‘`’, ‘"’, ‘\’, or newline. Within double quotes, backslashes that are followed by one of these characters are removed. Backslashes preceding characters without a special meaning are left unmodified
 
 - Dollar ($) single quotes: Charecter sequences in the form of $'string' are treated as special kind of single quotes.
 
@@ -174,4 +174,20 @@ Git Rebase — rewrites your branch history by replanting your commits on top of
 
 Python:
 
+print("Hello world") = Displays 'Hello world' in text.
 
+Integers + Floats:
+
+An Integer == A whole number
+A Float == A decimal number
+
+# +   addition
+# -   subtraction
+# *   multiplication
+# /   division
+# **  exponent (power)
+# %   modulo (remainder after division)
+# //  floor division (rounds down to nearest whole number)
+
+
+Lists are mutable whilst Tuples are immutable.
