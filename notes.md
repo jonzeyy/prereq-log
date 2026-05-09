@@ -172,7 +172,7 @@ Git Rebase — rewrites your branch history by replanting your commits on top of
 -------------------------------------------------------------------------------------------------------------
 
 
-Python:
+Python: Check 'python_notes.py' for majority of notes on python.
 
 print("Hello world") = Displays 'Hello world' in text.
 
@@ -191,3 +191,17 @@ A Float == A decimal number
 
 
 Lists are mutable whilst Tuples are immutable.
+
+
+# Comparisions:
+# Equal:              ==
+# Not Equal:          !=
+# Greater Than:       >
+# Less Than:          <
+# Greater or Equal:   >=  
+# Less or Equal:      <=
+# Object Identity:    is
+
+# and
+# or
+# not
