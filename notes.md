@@ -7,6 +7,7 @@ cd .... = take me to that folder
 cd ~ = home directory
 cd / = root of the file system
 pwd = print working directory
+explorer.exe . = open the folder in a GUI
 
 ls = list files in current folder
 ls -l = detailed list
@@ -15,6 +16,7 @@ mkdir .... = make a new directory
 touch .... = creates an empty file
 rm .... = delete file
 rm -r .... = delete everything inside folder
+rm -rf ... = deletes everything even if the file isnt empty
 rmdir .... = delete empty folder
 
 cp .... = copy file
@@ -62,7 +64,7 @@ There are 4 types of Quoting mechanisms.
 Terminal + Git notes:
 
 
-What is GIT? - Git is a version control system used to track changed to your source code and/or any files or folders. 
+What is GIT? - Git is a version control system used to track changed to your source code and/or any files or folders. ( Memory card )
 
 Snapshots: Git models the history of a collection of files and folders within some top level directory as a series of "Snapshots". 
 
@@ -134,7 +136,8 @@ Branching and Merging;
     - git merge <revision> = merges into current branch
     - git mergetool = use a fancy tool to help resolve merge conflicts
     - git rebase = rebase set of patches onto a new base
-
+    - git branch -d <branchname> = deletes branch
+    - git push origin --delete <branchname> = deletes branch on github
 
 Remotes;
 
@@ -151,5 +154,24 @@ Undo;
     - git commit --ammend = edit a commits contents/message
     - git reset <file> = unstage a file
     - git restore = discard changes
+
+
+--> Push = Sending local changes to the remote
+
+<-- Fetch = Bringing remote changed to your local repo, but not merging them yet
+
+<-- Pull = Fetching plus merging so your working directory immediately reflects the remote changes
+
+What is git stash? 
+    - git stash allows you to temporarily set aside your unfinished work, switch to another brand to do something.
+
+Git Rebase — rewrites your branch history by replanting your commits on top of the latest main, keeping the commit history clean and linear.
+
+
+
+-------------------------------------------------------------------------------------------------------------
+
+
+Python:
 
 
